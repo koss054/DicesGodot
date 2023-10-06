@@ -1,0 +1,60 @@
+[gd_scene load_steps=12 format=3 uid="uid://31n7c1ckihx3"]
+
+[ext_resource type="Texture2D" uid="uid://cubqfeynip27l" path="res://Assets/Dice/diceGreen1.png" id="1_phdg1"]
+[ext_resource type="Script" path="res://Screens/dice.gd" id="1_r6abp"]
+[ext_resource type="Texture2D" uid="uid://bs4g15dgpobt7" path="res://Assets/Dice/diceGreen2.png" id="2_w6w0k"]
+[ext_resource type="Texture2D" uid="uid://b86nv4n78tg0t" path="res://Assets/Dice/diceGreen3.png" id="3_bqclx"]
+[ext_resource type="Texture2D" uid="uid://c7hovvv6h8s17" path="res://Assets/Dice/diceGreen4.png" id="4_bt8mu"]
+[ext_resource type="Texture2D" uid="uid://dmyncju7mgwsv" path="res://Assets/Dice/diceGreen5.png" id="5_ovek4"]
+[ext_resource type="Texture2D" uid="uid://b5hbnwk817dq3" path="res://Assets/Dice/diceGreen6.png" id="6_hl3vk"]
+[ext_resource type="AudioStream" uid="uid://btiv5lkbl78yw" path="res://Assets/Audio/ding.mp3" id="8_cfqxe"]
+[ext_resource type="AudioStream" uid="uid://ciernwjxdf66s" path="res://Assets/Audio/steve_oof.mp3" id="9_rkif5"]
+[ext_resource type="AudioStream" uid="uid://1wyrkrkectrn" path="res://Assets/Audio/earned_points.mp3" id="10_wcaoy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kjqjd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_phdg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_w6w0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bqclx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bt8mu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ovek4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hl3vk")
+}],
+"loop": true,
+"name": &"green",
+"speed": 10.0
+}]
+
+[node name="Dice" type="Node2D"]
+script = ExtResource("1_r6abp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kjqjd")
+animation = &"green"
+
+[node name="Ding" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_cfqxe")
+volume_db = -9.37
+pitch_scale = 1.25
+
+[node name="Loss" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_rkif5")
+volume_db = -4.685
+pitch_scale = 0.46
+
+[node name="Earn" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_wcaoy")
+volume_db = -2.811
+pitch_scale = 0.96
