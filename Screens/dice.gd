@@ -36,7 +36,6 @@ func roll_dice():
 		await timer.timeout
 	
 	finish_roll()
-	print("finished roll")
 	
 	if dice_number > 0:
 		positive_roll_outcome()
@@ -47,11 +46,9 @@ func roll_dice():
 
 func positive_roll_outcome():
 	$Earn.play()
-	pass
 
 func negative_roll_outcome():
 	$Loss.play()
-	pass
 
 func slower_roll():
 	current_timer_delay += 0.05
