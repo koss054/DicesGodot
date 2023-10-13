@@ -1,3 +1,5 @@
 res://Screens/main.tscn
 res://Screens/dice.tscn
+res://Screens/player.tscn
+res://Screens/player.gd
 res://Screens/dice.gd

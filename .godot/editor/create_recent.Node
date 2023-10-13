@@ -1,2 +1,5 @@
+Label
+RichTextLabel
+TextEdit
 AudioStreamPlayer2D
 AnimatedSprite2D

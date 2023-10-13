@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bof616385lpyk"]
+[gd_scene load_steps=3 format=3 uid="uid://bof616385lpyk"]
 
 [ext_resource type="PackedScene" uid="uid://31n7c1ckihx3" path="res://Screens/dice.tscn" id="1_553b4"]
+[ext_resource type="PackedScene" uid="uid://ecjkbp7oo37n" path="res://Screens/player.tscn" id="2_6joq1"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Dice" parent="." instance=ExtResource("1_553b4")]
 position = Vector2(591, 309)
 scale = Vector2(0.5, 0.5)
+
+[node name="Player" parent="." instance=ExtResource("2_6joq1")]
+position = Vector2(-1, 1)

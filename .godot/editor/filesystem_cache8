@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696613483
+::res://::1697212153
 icon.svg::CompressedTexture2D::2772276071191502310::1696608121::1696608125::1::::<><>::
 ::res://Assets/::1696613483
-::res://Assets/Audio/::1696615373
+::res://Assets/Audio/::1696615376
 ding.mp3::AudioStreamMP3::3737852958779764762::1696613336::1696613483::1::::<><>::
 earned_points.mp3::AudioStreamMP3::1871814363455912683::1696615350::1696615376::1::::<><>::
 steve_oof.mp3::AudioStreamMP3::5343666202170693924::1696614371::1696614392::1::::<><>::
@@ -43,7 +43,7 @@ diceRedAlt3.png::CompressedTexture2D::5226182780806989040::1696608911::169660892
 diceRedAlt4.png::CompressedTexture2D::3910937744505289414::1696608911::1696608925::1::::<><>::
 diceRedAlt5.png::CompressedTexture2D::8106152210219284848::1696608911::1696608925::1::::<><>::
 diceRedAlt6.png::CompressedTexture2D::3702235979643591511::1696608911::1696608925::1::::<><>::
-::res://Screens/::1696614636
-dice.gd::GDScript::-1::1696614636::0::1::::<>Node2D<>::
-dice.tscn::PackedScene::2019808055097554278::1696614636::0::1::::<><>::uid://cubqfeynip27l::::res://Assets/Dice/diceGreen1.png<>res://Screens/dice.gd<>uid://bs4g15dgpobt7::::res://Assets/Dice/diceGreen2.png<>uid://b86nv4n78tg0t::::res://Assets/Dice/diceGreen3.png<>uid://c7hovvv6h8s17::::res://Assets/Dice/diceGreen4.png<>uid://dmyncju7mgwsv::::res://Assets/Dice/diceGreen5.png<>uid://b5hbnwk817dq3::::res://Assets/Dice/diceGreen6.png<>uid://btiv5lkbl78yw::::res://Assets/Audio/ding.mp3<>uid://ciernwjxdf66s::::res://Assets/Audio/steve_oof.mp3
-main.tscn::PackedScene::3381316713831428686::1696614572::0::1::::<><>::uid://31n7c1ckihx3::::res://Screens/dice.tscn
+::res://Screens/::1696754122
+dice.gd::GDScript::-1::1696616879::0::1::::<>Node2D<>::
+dice.tscn::PackedScene::2019808055097554278::1696754122::0::1::::<><>::uid://cubqfeynip27l::::res://Assets/Dice/diceGreen1.png<>res://Screens/dice.gd<>uid://bs4g15dgpobt7::::res://Assets/Dice/diceGreen2.png<>uid://b86nv4n78tg0t::::res://Assets/Dice/diceGreen3.png<>uid://c7hovvv6h8s17::::res://Assets/Dice/diceGreen4.png<>uid://dmyncju7mgwsv::::res://Assets/Dice/diceGreen5.png<>uid://b5hbnwk817dq3::::res://Assets/Dice/diceGreen6.png<>uid://btiv5lkbl78yw::::res://Assets/Audio/ding.mp3<>uid://ciernwjxdf66s::::res://Assets/Audio/steve_oof.mp3<>uid://1wyrkrkectrn::::res://Assets/Audio/earned_points.mp3
+main.tscn::PackedScene::3381316713831428686::1696754122::0::1::::<><>::uid://31n7c1ckihx3::::res://Screens/dice.tscn

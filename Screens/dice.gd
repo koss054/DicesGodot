@@ -1,6 +1,6 @@
 extends Node2D
 
-var dice_number = 0
+var dice_number: int = 0
 var can_roll = true
 
 var initial_timer_delay = 0.05
@@ -10,12 +10,15 @@ var timer = create_timer(current_timer_delay)
 var initial_pitch_scale = 1.25
 var current_pitch_scale = initial_pitch_scale
 
+@onready var player_one = get_node("../Player")
+
 func _ready():
 	pass
 
 func _process(delta):
 	if Input.is_action_just_pressed("dice_roll") and can_roll:
 			can_roll = false
+			player_one.current_name_node.set_text("PLAYER1")
 			roll_dice()
 
 func roll_dice():
@@ -25,7 +28,7 @@ func roll_dice():
 	for roll in range(total_rolls, -1, -1):
 		dice_number = get_random_number(0, 5)
 		$Ding.play(0.25)
-		$AnimatedSprite2D.set_frame(dice_number)
+		$DiceSprite.set_frame(dice_number)
 		
 		if roll <= rolls_when_slowing_down:
 			slower_roll()
@@ -38,17 +41,20 @@ func roll_dice():
 	finish_roll()
 	
 	if dice_number > 0:
-		positive_roll_outcome()
+		positive_roll_outcome(dice_number)
 	else:
 		negative_roll_outcome()
 	
 	can_roll = true
 
-func positive_roll_outcome():
+# Dice number is 0-5. + 1 is added for accurate score.
+func positive_roll_outcome(dice_number: int):
 	$Earn.play()
+	player_one.increase_current_points(dice_number + 1)
 
 func negative_roll_outcome():
 	$Loss.play()
+	player_one.remove_current_points()
 
 func slower_roll():
 	current_timer_delay += 0.05
@@ -68,13 +74,13 @@ func get_random_number(min_range, max_range):
 	return randi_range(min_range, max_range);
 
 func create_timer(seconds):
-	var timer = Timer.new()
-	self.add_child(timer)
+	var newTimer = Timer.new()
+	self.add_child(newTimer)
 	
-	timer.wait_time = seconds
-	timer.one_shot = true
+	newTimer.wait_time = seconds
+	newTimer.one_shot = true
 	
-	return timer
+	return newTimer
 
 func update_timer_delay(updated_timer, updated_seconds):
 	updated_timer.wait_time = updated_seconds
