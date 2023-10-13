@@ -24,3 +24,9 @@ func remove_current_points():
 	
 func update_node_text(updated_node: Label, new_text):
 	updated_node.set_text(str(new_text))
+
+func take_current_points():
+	total_points += current_points
+	current_points = 0
+	update_node_text(total_points_node, total_points)
+	update_node_text(current_points_node, current_points)

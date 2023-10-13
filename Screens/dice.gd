@@ -15,11 +15,15 @@ var current_pitch_scale = initial_pitch_scale
 func _ready():
 	pass
 
+#TODO: Move process logic to main scene's script.
 func _process(delta):
 	if Input.is_action_just_pressed("dice_roll") and can_roll:
-			can_roll = false
-			player_one.current_name_node.set_text("PLAYER1")
-			roll_dice()
+		can_roll = false
+		player_one.current_name_node.set_text("PLAYER1")
+		roll_dice()
+	
+	if Input.is_action_just_pressed("take_points") and can_roll:
+		player_one.take_current_points()
 
 func roll_dice():
 	var total_rolls = get_random_number(8, 16)
