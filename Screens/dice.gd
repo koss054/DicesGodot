@@ -44,21 +44,21 @@ func roll_dice():
 	
 	finish_roll()
 	
-	if dice_number > 0:
+	if dice_number > 1:
 		positive_roll_outcome(dice_number)
 	else:
-		negative_roll_outcome()
+		negative_roll_outcome(dice_number)
 	
 	can_roll = true
 
-# Dice number is 0-5. + 1 is added for accurate score.
+# Dice number is 0-5. + 1 is added for accurate score/roll.
 func positive_roll_outcome(dice_number: int):
 	$Earn.play()
 	player_one.increase_current_points(dice_number + 1)
 
-func negative_roll_outcome():
+func negative_roll_outcome(dice_number: int):
 	$Loss.play()
-	player_one.remove_current_points()
+	player_one.remove_current_points(dice_number + 1)
 
 func slower_roll():
 	current_timer_delay += 0.05
